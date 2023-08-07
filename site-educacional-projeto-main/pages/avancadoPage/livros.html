@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS LINK (Estilização da página)-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--FAVICON LINK (Icone da página)-->
+    <link rel="shortcut icon" href="/faviconTI.png" type="image/x-icon" />
+    <!--BOOTSTRAP LINK (Conjunto de ferramentas)-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!--AOS ANIMATION (Animação de texto)-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Projeto TI</title>
+
+    <style>
+
+        p{
+
+            text-align: center;
+        }
+
+    h1{
+
+        text-align: center;
+
+    }
+</style>
+
+  </head>
+  <body>
+    <div class="container02">
+      <header class="headerContent">
+        <div class="headerText">
+          <a href="/pages/home.html" class="logoAnchor text-center">
+            <h3><mark id="titleLogo">ESCOLA TÉCNICA SÃO VINCENTE</mark></h3>
+            <p>O ENSINO INTEGRADOR DA TECNOLOGIA</p></a
+          >
+        </div>
+        <div class="btnNavGroup">
+          <div class="dropdown">
+            <button class="btn btn-outline-light dropbtn">Nível Básico</button>
+            <div class="dropdown-content">
+              <a class="anchorNav" href="/pages/basicaPage/introinfo.html"
+                >Introdução á Informática</a
+              >
+              <a class="anchorNav" href="/pages/basicaPage/ingles.html"
+              >Inglês Técnico</a
+            >
+              <a class="anchorNav" href="/pages/basicaPage/fundamentos.html"
+                >Fundamentos de Hardware e Software</a
+              >
+              <a class="anchorNav" href="/pages/basicaPage/programacao1.html"
+                >Lógica de Programação I</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-light dropbtn">
+              Nível Intermediário
+            </button>
+            <div class="dropdown-content">
+              <a class="anchorNav" href="/pages/intermedioPage/so.html"
+                >Sistemas Operacionais</a
+              >
+              <a class="anchorNav" href="/pages/intermedioPage/devweb.html"
+                >Desenvolvimento Web</a
+              >
+              <a class="anchorNav" href="/pages/intermedioPage/segsistemas.html"
+                >Segurança de Sitema</a
+              >
+              <a class="anchorNav" href="/pages/intermedioPage/redes.html"
+                >Redes de Computadores</a
+              >
+              <a
+                class="anchorNav"
+                href="/pages/intermedioPage/programacao2.html"
+                >Lógica de Programação II</a
+              >
+            </div>
+              
+
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-light dropbtn">
+              Nível Avançado
+            </button>
+            <div class="dropdown-content">
+              <a class="anchorNav" href="/pages/avancadoPage/bancodados.html"
+                >Banco de Dados</a
+              >
+              <a class="anchorNav" href="/pages/avancadoPage/projetoint.html"
+                >Projeto Integrador</a
+              >
+              <a class="anchorNav" href="/pages/avancadoPage/phpweb.html"
+                >Programação para Internet</a
+              >
+              <a class="anchorNav" href="/pages/avancadoPage/aps.html"
+                >Analise de Projetos e Sistemas</a
+              >
+              <a
+                class="anchorNav"
+                href="/pages/avancadoPage/poo.html"
+                >Programação Orientada a Objetos</a>
+
+                <a
+                class="anchorNav"
+                href="/pages/avancadoPage/empreendedorismo.html"
+                >Empreendedorismo</a>
+            </div>
+          </div>
+        </div>
+      </header>
+<body>
+    <h1>Consulta de Disponibilidade de Livros</h1>
+    <form onsubmit="return consultarLivro()">
+        <label for="titulo">Título do Livro:</label>
+        <input type="text" id="titulo" placeholder="Digite o título do livro" required>
+        <button type="submit">Consultar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function consultarLivro() {
+            const titulo = document.getElementById('titulo').value;
+
+            // Aqui você pode adicionar a lógica para consultar a disponibilidade do livro no seu banco de dados ou em uma API externa.
+            // Neste exemplo, apenas simularemos uma resposta aleatória.
+
+            const disponibilidade = Math.random() < 0.5 ? 'Disponível' : 'Indisponível';
+
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `<p>O livro "${titulo}" está ${disponibilidade}.</p>`;
+
+            return false; // Evita o recarregamento da página após o envio do formulário.
+        }
+    </script>
+</body>
+</html>
